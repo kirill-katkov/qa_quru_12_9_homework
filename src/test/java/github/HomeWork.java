@@ -52,7 +52,7 @@ public class HomeWork {
 
     * */
     @Test
-    void solntsevShouldBeFirstContributor() {
+    void searchJunit5() {
         open("https://github.com/selenide/selenide");
         $("span[data-content=Wiki]").click();
         $("li.wiki-more-pages-link").$("button").click();
