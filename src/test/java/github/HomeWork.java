@@ -1,13 +1,12 @@
 package github;
 
-import com.codeborne.selenide.*;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.itemWithText;
-import static com.codeborne.selenide.CollectionCondition.textsInAnyOrder;
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomeWork {
@@ -16,7 +15,6 @@ public class HomeWork {
     static void setUp() {
         Configuration.holdBrowserOpen = true;
     }
-
 
 
     /*
@@ -54,7 +52,7 @@ public class HomeWork {
 
     * */
     @Test
-    void solntsevShouldBeFirstContributor(){
+    void solntsevShouldBeFirstContributor() {
         open("https://github.com/selenide/selenide");
         $("span[data-content=Wiki]").click();
         $("li.wiki-more-pages-link").$("button").click();
